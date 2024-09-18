@@ -22,7 +22,7 @@ npx-create-next-app@latest
 
 √ Would you like to customize the default import alias (@/*)? ... **No** / Yes
 
-Creating a new Next.js app in E:\OneDrive\Desktop\Documents\BAiO\BAi\baio_frontend.
+Creating a new Next.js app in pathname.
 
 Using npm.
 
