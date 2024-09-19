@@ -1,12 +1,14 @@
 import Header from "@/components/Header/Header";
-import loginPage from "./pages/Login/page";
+import LoginPage from "@/components/RegistrationPage/RegistrationPage"
 
 export default function App() {
   return (
       
       <div className = "body">
         <Header/>
-        <loginPage/>
+          <div> 
+            <LoginPage/>
+          </div>
       </div>
     
     

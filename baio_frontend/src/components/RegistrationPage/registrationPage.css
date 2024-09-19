@@ -1,0 +1,80 @@
+.bracket {
+    margin: 10em;
+    margin-left: 30em;
+    margin-right: 30em;
+}
+
+.registration-page {
+    background-color: #fff;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+    max-width: 80em;
+    margin: 0 auto;
+    background-color: #fff;
+    color: black;
+    padding: 1.5em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.new-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    max-width: 300px;
+  }
+
+.form-row input {
+    border: 1px solid;
+}
+
+.logInContainer {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logInConfirmationTextContainer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content h1 {
+    font-size: 1em;
+    font-weight: 100;
+}
+
+.content p {
+    font-size: 1.25em;
+    line-height: 1.35em;
+}
+
+.btn {
+    color: black;
+    padding: 0.25em 0.5em;
+    border: 1px solid black;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: hsla(352, 64%, 35%, 0.2);
+  }
+
