@@ -1,16 +1,28 @@
-import React from "react";
-import Button from '../Button/Button';
-import Image from "next/image";
-import './ProfileDropdown.css';
+"use client";
 
-export default function ProfileDropDown({type = 'dropdown'}) {
+import React from "react";
+import './ProfileDropdown.css';
+import { FaUserCircle } from 'react-icons/fa';
+import { CiSettings } from 'react-icons/ci';
+import { FiMoon } from 'react-icons/fi';
+import  { MdLogout } from "react-icons/md";
+
+
+
+
+export default function ProfileDropDown({type = 'dropdown', openSettings, openProfileSettings}) {
+
     return (
         <div className="dropdown">
-            <button className="dropdownButton">Profile</button>
-            <button className="dropdownButton">Settings</button>
-            <button className="dropdownButton">Swith to Dark Mode</button>
-
-            <button className="dropdownButton">Sign Out</button>
+            <div className="dropdownTop">
+                <button className="dropdownButton" onClick={openProfileSettings}><FaUserCircle size="1.3em"/>Profile</button>
+                <button className="dropdownButton" onClick={openSettings}><CiSettings size="1.3em"/>Settings</button>
+                <button className="dropdownButton"><FiMoon size="1.3em"/>Swith to Dark Mode</button>
+            </div>
+            <div className="dropdownBottom">
+                <hr className="dropdownDivider"/>
+                <button className="dropdownButton"><MdLogout size="1.3em"/>Sign Out</button>
+            </div>
         </div>
     )
 }
