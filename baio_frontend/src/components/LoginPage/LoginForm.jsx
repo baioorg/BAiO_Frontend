@@ -61,8 +61,8 @@ export default function LogInForm(props) {
                         type="text"
                         id="password" />
                 </div>
-                <Link className = "link" href="/">Forgot password?</Link>
-                <button className="btn" type="submit">Login</button>
+                <button className="btn" type="submit">Sign In</button>
+                <Link className = "text link" href="/">Forgot password?</Link>
             </form>
         </div>
     );

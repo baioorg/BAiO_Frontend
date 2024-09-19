@@ -22,6 +22,8 @@ export default function loginPage() {
           <h1> Sign in to BAiO as an existing user</h1>
           <LogInForm onSubmit={takeInCredentials} />
           <hr className = "line"/>
+          <h1> Register as a new BAiO user</h1>
+          <button className="btn" type="submit">Create new user account</button>
         </div>
       </div>
     </div>

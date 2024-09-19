@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: column;
     border: 1px solid rgb(0, 0, 0);
-    width: 300px; /*change width of sign in panel*/
+    width: 350px; /*change width of sign in panel*/
 }
 
 .new-item-form {
@@ -44,6 +44,7 @@
 
 .form-row input {
     border: 1px solid;
+    border-radius: 0.3em;
 }
 
 .logInContainer {
@@ -64,12 +65,19 @@
     font-size: 15px;
     font-weight: 100;
     font-weight: bold;
+    text-align: center;
+    margin: 5px;
 }
 
 .btn {
-    color: black;
+    color: rgb(255, 255, 255);
+    background-color: black;
     padding: 0.25em 0.5em;
     border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
 }
 
 .btn:hover,
@@ -81,4 +89,5 @@
     margin-top: 1.5em;
     margin-bottom: 1.5em;
 }
+
 
