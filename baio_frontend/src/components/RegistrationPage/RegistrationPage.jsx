@@ -17,9 +17,11 @@ export default function loginPage() {
 
   return (
     <div className="bracket">
-      <div className="registration-page content">
-        <h1> Sign in to BAiO as an existing user</h1>
-        <RegistrationForm onSubmit={takeInCredentials} />
+      <div className="registration-page">
+        <div className="content">
+          <h1> Sign in to BAiO as an existing user</h1>
+          <RegistrationForm onSubmit={takeInCredentials} />
+        </div>
       </div>
     </div>
   );
