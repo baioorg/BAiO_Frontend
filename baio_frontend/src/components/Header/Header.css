@@ -1,0 +1,28 @@
+.navbar {
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .navbarleft {
+    display: flex;
+    gap: 15px;
+  }
+
+  .navbarright {
+    display: flex;
+    gap: 15px;
+  }
+
+  Link {
+    font-size: 2.25em;
+    font-family: 'Roboto', sans-serif;
+
+  }
+
+  h1 {
+    font-size: 6em;
+    font-family: 'Roboto', sans-serif;
+  }
