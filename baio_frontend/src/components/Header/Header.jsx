@@ -6,6 +6,7 @@ import Link from "next/link";
 import Button from '../Button/Button'
 import Image from "next/image";
 import ProfileDropdown from "../ProfileDropdown/ProfileDropdown";
+import {FaGithub, FaUserCircle} from 'react-icons/fa';
 
 
 export default function Header({type = 'header'}) {
@@ -25,10 +26,12 @@ export default function Header({type = 'header'}) {
                 </div>
 
                 <div className = "navbarRight">
-                    <Link href="https://github.com/baioorg/" target="_blank" className="navbarLink">Github</Link>
+                    <Link href="https://github.com/baioorg/" target="_blank" className="navbarLink"><FaGithub color="#ffffff" size="1.5em"/>Github</Link>
                     <Link href="/pages/About" className="navbarLink">About</Link>
-                    <Link href="/" className="navbarLink">Contact</Link>      
-                    <Button onClick={toggleDropdown}><Image src="/profile-icon.png" alt="Profile Icon" width = {25} height= {25}/> </Button>
+                    <Link href="/pages/Team" className="navbarLink">Contact</Link>      
+                    <Button onClick={toggleDropdown} classname="profileButton" aria-label="Profile Menu">
+                        <FaUserCircle color="#ffffff" size="3em"/>
+                    </Button>
                 </div>
 
             </header>

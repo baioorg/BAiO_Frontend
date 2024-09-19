@@ -1,8 +1,24 @@
 import "./loginPage.css"
 
+
+
 export default function loginPage() {
     return(
-        <div>loginPage</div>
+        <div className = "loginPage body">
+        <div>loginpage</div>
+        <div>loginpage</div>
+        <div>loginpage</div>
+        <div>loginpage</div>
+        <div>loginpage</div>
+        <div>loginpage</div>
+        <div>loginpage</div>
+        <div>loginpage</div>
+        <div>loginpage</div>
+        <div>loginpage</div>
+        <div>loginpage</div>
+        <div>loginpage</div>
+        </div>
+        
 
     );
 }
