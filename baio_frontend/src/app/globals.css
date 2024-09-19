@@ -19,4 +19,11 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+.link:hover {
+   text-decoration: underline;
 }
+
+}
+
+

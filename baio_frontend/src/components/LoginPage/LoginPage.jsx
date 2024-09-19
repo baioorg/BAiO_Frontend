@@ -3,8 +3,8 @@
 "use client";
 
 import { useState } from "react";
-import RegistrationForm from "./RegistrationForm";
-import "./registrationPage.css";
+import "./LoginPage.css";
+import LogInForm from "./LoginForm";
 
 export default function loginPage() {
   const [submittedUsername, setSubmittedUsername] = useState("");
@@ -17,10 +17,11 @@ export default function loginPage() {
 
   return (
     <div className="bracket">
-      <div className="registration-page">
+      <div className="loginPage-page">
         <div className="content">
           <h1> Sign in to BAiO as an existing user</h1>
-          <RegistrationForm onSubmit={takeInCredentials} />
+          <LogInForm onSubmit={takeInCredentials} />
+          <hr className = "line"/>
         </div>
       </div>
     </div>

@@ -4,9 +4,9 @@
     max-width: 600px;
 }
 
-.registration-page {
+.login-page {
     background-color: #fff;
-    max-width: 30em;
+    max-width:500em;
     text-align: start;
     display: flex;
     justify-content: center;
@@ -15,7 +15,6 @@
 }
 
 .content {
-    max-width: 80em;
     margin: 0 auto;
     background-color: #fff;
     color: black;
@@ -23,21 +22,24 @@
     border-radius: 1em;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     border: 1px solid rgb(0, 0, 0);
+    width: 300px; /*change width of sign in panel*/
 }
 
 .new-item-form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    width: 100%;
 }
 
 .form-row {
     display: flex;
     flex-direction: column;
-    gap: 0.1rem;
-    max-width: 300px;
+    gap: 0.2rem;
+    max-width: 400em;
+    font-size: 14px;
+    
   }
 
 .form-row input {
@@ -59,13 +61,9 @@
 }
 
 .content h1 {
-    font-size: 1em;
+    font-size: 15px;
     font-weight: 100;
-}
-
-.content p {
-    font-size: 1.25em;
-    line-height: 1.35em;
+    font-weight: bold;
 }
 
 .btn {
@@ -78,4 +76,9 @@
 .btn:focus-visible {
     background: hsla(352, 64%, 35%, 0.2);
   }
+
+.line {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
 
