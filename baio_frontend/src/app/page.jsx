@@ -1,5 +1,6 @@
 import Header from "@/components/Header/Header";
-import LoginPage from "@/components/LoginPage/LoginPage"
+import Login from "@/components/Login/LoginPage"
+
 
 export default function App() {
   return (
@@ -7,7 +8,7 @@ export default function App() {
       <div className = "body">
         <Header/>
           <div> 
-            <LoginPage/>
+            <Login/>
           </div>
       </div>
     
