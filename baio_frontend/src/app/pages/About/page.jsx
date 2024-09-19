@@ -1,8 +1,12 @@
+import Header from "@/components/Header/Header";
 import React from "react";
+import './page.css'; 
 
 
 export default function About() {
-  <div className="about-page">
+  return (
+  <div className="about-page body">
+    <Header/>
     <div className="content">
       <h2>About BAiO</h2>
       <p>
@@ -52,5 +56,6 @@ export default function About() {
         metus, ullamcorper vel, tincidunt sed, euismod in, nibh.
       </p>
     </div>
-  </div>;
+  </div>
+  );
 }
