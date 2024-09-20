@@ -1,6 +1,11 @@
-import { useState } from "react";
+//https://www.npmjs.com/package/react-select-country-list
+
+import { useState, useMemo } from "react";
 import "./RegistrationForm.css";
 import { useRouter } from "next/navigation";
+
+import Select from "react-select";
+import countryList from "react-select-country-list";
 
 export default function RegistrationForm(props) {
   const [firstName, setFirstName] = useState("");
@@ -12,6 +17,12 @@ export default function RegistrationForm(props) {
   const [fieldOfStudy, setFieldOfStudy] = useState("");
 
   const router = useRouter();
+
+  const countryOptions = useMemo(() => countryList().getData(), []);
+
+  const changeHandler = (country) => {
+    setCountry(country);
+  };
 
   async function handleSubmit(event) {
     try {
@@ -43,26 +54,28 @@ export default function RegistrationForm(props) {
     } else {
       return false;
     }
+  }
+
+  // Main form submission handler
+  function allFieldsFilled(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Check if all fields are filled
+    if (!checkAllFieldsAreNotEmpty()) {
+      alert("Please fill all fields.");
+      return false;
     }
 
-    // Main form submission handler
-    function allFieldsFilled(event) {
-      event.preventDefault(); // Prevent default form submission behavior
+    // Validate email
+    if (!validateEmail(email)) {
+      alert(
+        "Please enter a valid email address in the format of email@domain.com."
+      );
+      return false;
+    }
 
-      // Check if all fields are filled
-      if (!checkAllFieldsAreNotEmpty()) {
-        alert("Please fill all fields.");
-        return false;
-      }
-
-      // Validate email
-      if (!validateEmail(email)) {
-        alert("Please enter a valid email address in the format of email@domain.com.");
-        return false;
-      }
-
-      // Proceed with form submission
-      handleSubmit();
+    // Proceed with form submission
+    handleSubmit();
   }
 
   return (
@@ -95,13 +108,12 @@ export default function RegistrationForm(props) {
             id="email"
           />
         </div>
-        <div className="reg-form-row">
+        <div className = "reg-dropdown">
           <label htmlFor="country">Country</label>
-          <input
+          <Select
+            options={countryOptions}
             value={country}
-            onChange={(country) => setCountry(country.target.value)}
-            type="text"
-            id="country"
+            onChange={changeHandler}
           />
         </div>
         <div className="reg-form-row">
@@ -139,5 +151,4 @@ export default function RegistrationForm(props) {
       </form>
     </div>
   );
-
 }

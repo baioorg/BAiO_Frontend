@@ -2,7 +2,6 @@
 
 "use client";
 
-import { useState } from "react";
 import "./LoginPage.css";
 import LogInForm from "./LoginForm";
 import Link from "next/link";
@@ -17,9 +16,11 @@ export default function loginPage() {
             <LogInForm/>
             <hr className = "line"/>
             <h1> Register as a new BAiO user</h1>
-            <button className="btn">
-              <Link href="/pages/Registration">Create new user account</Link>
-            </button>
+            
+              <Link className ="btn" href="/pages/Registration">
+                <button>Create new user account</button>
+              </Link>
+            
         </div>
       </div>
     </div>
