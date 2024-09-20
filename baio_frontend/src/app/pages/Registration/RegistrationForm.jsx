@@ -29,7 +29,6 @@ export default function RegistrationForm() {
   //send user to email validation page
   async function handleSubmit(event) {
     try {
-      console.log(country.label)
       router.push("/pages/EmailValidation");
     } catch (error) {
       alert("Error during registration");
