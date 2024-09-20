@@ -1,4 +1,4 @@
-//https://www.npmjs.com/package/react-select-country-list
+
 
 import { useState, useMemo } from "react";
 import "./RegistrationForm.css";
@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import Select from "react-select";
 import countryList from "react-select-country-list";
 
-export default function RegistrationForm(props) {
+export default function RegistrationForm() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -18,12 +18,15 @@ export default function RegistrationForm(props) {
 
   const router = useRouter();
 
+  //Dropdown menu built: https://www.npmjs.com/package/react-select-country-list
+
   const countryOptions = useMemo(() => countryList().getData(), []);
 
   const changeHandler = (country) => {
     setCountry(country);
   };
 
+  //send user to email validation page
   async function handleSubmit(event) {
     try {
       router.push("/pages/EmailValidation");
@@ -56,17 +59,18 @@ export default function RegistrationForm(props) {
     }
   }
 
-  // Main form submission handler
+  
   function allFieldsFilled(event) {
-    event.preventDefault(); // Prevent default form submission behavior
+    //dont refresh
+    event.preventDefault(); 
 
-    // Check if all fields are filled
+    //if all fields are filled
     if (!checkAllFieldsAreNotEmpty()) {
       alert("Please fill all fields.");
       return false;
     }
 
-    // Validate email
+    //the email looks like an email
     if (!validateEmail(email)) {
       alert(
         "Please enter a valid email address in the format of email@domain.com."
@@ -74,7 +78,7 @@ export default function RegistrationForm(props) {
       return false;
     }
 
-    // Proceed with form submission
+    //send it
     handleSubmit();
   }
 

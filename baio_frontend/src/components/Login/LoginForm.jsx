@@ -5,7 +5,7 @@ import "./LoginPage.css";
 import Link from "next/link";
 
 
-export default function LogInForm(props) {
+export default function LogInForm() {
 
     const [username, setNewUsername] = useState("")
     const [password, setPassword] = useState("")
