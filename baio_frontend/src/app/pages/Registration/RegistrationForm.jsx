@@ -99,7 +99,7 @@ export default function RegistrationForm(props) {
           <label htmlFor="country">Country</label>
           <input
             value={country}
-            onChange={(country) => setCountry(country.target.value)}
+            onChange={(country) => setCountry(CountrySelector().target.value)}
             type="text"
             id="country"
           />
