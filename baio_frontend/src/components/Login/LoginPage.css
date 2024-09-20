@@ -44,6 +44,7 @@
 .form-row input {
     border: 1px solid;
     border-radius: 0.3em;
+    height:30px;
 }
 
 .logInContainer {
