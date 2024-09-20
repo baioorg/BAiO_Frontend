@@ -29,6 +29,7 @@ export default function RegistrationForm() {
   //send user to email validation page
   async function handleSubmit(event) {
     try {
+      console.log(country.label)
       router.push("/pages/EmailValidation");
     } catch (error) {
       alert("Error during registration");
@@ -48,7 +49,7 @@ export default function RegistrationForm() {
       firstName.length > 1 &&
       lastName.length > 1 &&
       email.length > 1 &&
-      country.length > 1 &&
+      country !== "" &&
       affiliation.length > 1 &&
       position.length > 1 &&
       fieldOfStudy.length > 1
