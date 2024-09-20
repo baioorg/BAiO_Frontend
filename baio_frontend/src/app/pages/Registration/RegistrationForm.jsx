@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./RegistrationForm.css";
+import { useRouter } from "next/navigation";
 
 export default function RegistrationForm(props) {
   const [firstName, setFirstName] = useState("");
@@ -10,48 +11,11 @@ export default function RegistrationForm(props) {
   const [position, setPosition] = useState("");
   const [fieldOfStudy, setFieldOfStudy] = useState("");
 
-  function takeInUseInfo(
-    firstName,
-    lastName,
-    email,
-    country,
-    affiliation,
-    position,
-    fieldOfStudy
-  ) {
-    setFirstName(firstName);
-    setLastName(lastName);
-    setEmail(email);
-    setCountry(country);
-    setAffiliation(affiliation);
-    setPosition(position);
-    setFieldOfStudy(fieldOfStudy);
-  }
+  const router = useRouter();
 
   async function handleSubmit(event) {
-    event.preventDefault();
     try {
-      const response = await fetch("/api/registration", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName,
-          lastName,
-          email,
-          country,
-          affiliation,
-          position,
-          fieldOfStudy,
-        }),
-      });
-
-      if (response.ok) {
-        alert("User registration successful");
-      } else {
-        alert("Registration failed, please try again");
-      }
+      router.push("/pages/EmailValidation");
     } catch (error) {
       alert("Error during registration");
     }
@@ -61,28 +25,44 @@ export default function RegistrationForm(props) {
     if (email.includes("@") && email.includes(".")) {
       return true;
     } else {
-      alert("Please enter valid email address");
       return false;
     }
   }
 
-  function allFieldsFilled(event) {
-    if (validateEmail(email)) {
-      if (
-        firstName.length > 1 &&
-        lastName.length > 1 &&
-        email.length > 1 &&
-        country.length > 1 &&
-        affiliation.length > 1 &&
-        position.length > 1 &&
-        fieldOfStudy.length > 1
-      ) {
-        return handleSubmit(event);
-      } else {
-        alert("Please fill all fields");
+  function checkAllFieldsAreNotEmpty() {
+    if (
+      firstName.length > 1 &&
+      lastName.length > 1 &&
+      email.length > 1 &&
+      country.length > 1 &&
+      affiliation.length > 1 &&
+      position.length > 1 &&
+      fieldOfStudy.length > 1
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+    }
+
+    // Main form submission handler
+    function allFieldsFilled(event) {
+      event.preventDefault(); // Prevent default form submission behavior
+
+      // Check if all fields are filled
+      if (!checkAllFieldsAreNotEmpty()) {
+        alert("Please fill all fields.");
         return false;
       }
-    }
+
+      // Validate email
+      if (!validateEmail(email)) {
+        alert("Please enter a valid email address in the format of email@domain.com.");
+        return false;
+      }
+
+      // Proceed with form submission
+      handleSubmit();
   }
 
   return (
@@ -154,9 +134,10 @@ export default function RegistrationForm(props) {
           />
         </div>
         <button className="reg-btn" type="submit">
-          Create new user account
+          Create new BAiO user account
         </button>
       </form>
     </div>
   );
+
 }
