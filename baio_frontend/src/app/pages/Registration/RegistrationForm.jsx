@@ -85,67 +85,78 @@ export default function RegistrationForm(props) {
     }
   }
 
-  return ( 
-  <div className = "regContainer">
-    <form onSubmit={allFieldsFilled} classname = "new-user-form">
-        <div className = "form-row">
-            <label htmlFor="firstName">First Name</label>
-            <input
-                value = {firstName}
-                onChange = {firstName => setFirstName(firstName.target.value)}
-                type = "text"
-                id = "firstName" />
+  return (
+    <div className="regContainer">
+      <form onSubmit={allFieldsFilled} classname="new-user-form">
+        <div className="reg-form-row">
+          <label htmlFor="firstName">First Name</label>
+          <input
+            value={firstName}
+            onChange={(firstName) => setFirstName(firstName.target.value)}
+            type="text"
+            id="firstName"
+          />
         </div>
-        <div className = "form-row">
-            <label htmlFor="lastName">Last Name</label>
-            <input
-                value = {lastName}
-                onChange = {lastName => setLastName(lastName.target.value)}
-                type = "text"
-                id = "lastName" />
+        <div className="reg-form-row">
+          <label htmlFor="lastName">Last Name</label>
+          <input
+            value={lastName}
+            onChange={(lastName) => setLastName(lastName.target.value)}
+            type="text"
+            id="lastName"
+          />
         </div>
-        <div className = "form-row">
-            <label htmlFor="email">Email</label>
-            <input
-                value = {email}
-                onChange = {email => setEmail(email.target.value)}
-                type = "text"
-                id = "email" />
+        <div className="reg-form-row">
+          <label htmlFor="email">Email</label>
+          <input
+            value={email}
+            onChange={(email) => setEmail(email.target.value)}
+            type="text"
+            id="email"
+          />
         </div>
-        <div className = "form-row">
-            <label htmlFor="country">Country</label>
-            <input
-                value = {country}
-                onChange = {country => setCountry(country.target.value)}
-                type = "text"
-                id = "country" />
+        <div className="reg-form-row">
+          <label htmlFor="country">Country</label>
+          <input
+            value={country}
+            onChange={(country) => setCountry(country.target.value)}
+            type="text"
+            id="country"
+          />
         </div>
-        <div className = "form-row">
-            <label htmlFor="affiliation">Affiliation</label>
-            <input
-                value = {affiliation}
-                onChange = {affiliation => setAffiliation(affiliation.target.value)}
-                type = "text"
-                id = "affiliation" />
+        <div className="reg-form-row">
+          <label htmlFor="affiliation">Affiliation</label>
+          <input
+            value={affiliation}
+            onChange={(affiliation) => setAffiliation(affiliation.target.value)}
+            type="text"
+            id="affiliation"
+          />
         </div>
-        <div className = "form-row">
-            <label htmlFor="position">Position</label>
-            <input
-                value = {position}
-                onChange = {position => setPosition(position.target.value)}
-                type = "text"
-                id = "position" />
+        <div className="reg-form-row">
+          <label htmlFor="position">Position</label>
+          <input
+            value={position}
+            onChange={(position) => setPosition(position.target.value)}
+            type="text"
+            id="position"
+          />
         </div>
-        <div className = "form-row">
-            <label htmlFor="fieldOfStudy">Field of study</label>
-            <input
-                value = {fieldOfStudy}
-                onChange = {fieldOfStudy => setFieldOfStudy(fieldOfStudy.target.value)}
-                type = "text"
-                id = "fieldOfStudy" />
+        <div className="reg-form-row">
+          <label htmlFor="fieldOfStudy">Field of study</label>
+          <input
+            value={fieldOfStudy}
+            onChange={(fieldOfStudy) =>
+              setFieldOfStudy(fieldOfStudy.target.value)
+            }
+            type="text"
+            id="fieldOfStudy"
+          />
         </div>
-    </form>
-
-  </div>
+        <button className="reg-btn" type="submit">
+          Create new user account
+        </button>
+      </form>
+    </div>
   );
 }
