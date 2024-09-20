@@ -8,20 +8,13 @@ import LogInForm from "./LoginForm";
 import Link from "next/link";
 
 export default function loginPage() {
-  const [submittedUsername, setSubmittedUsername] = useState("");
-  const [submittedPassword, setSubmittedPassword] = useState("");
-
-  function takeInCredentials(username, password) {
-    setSubmittedUsername(username);
-    setSubmittedPassword(password);
-  }
-
+ 
   return (
     <div className="bracket">
       <div className="loginPage-page">
         <div className="logincontent">
           <h1> Sign in to BAiO as an existing user</h1>
-            <LogInForm onSubmit={takeInCredentials} />
+            <LogInForm/>
             <hr className = "line"/>
             <h1> Register as a new BAiO user</h1>
             <button className="btn">

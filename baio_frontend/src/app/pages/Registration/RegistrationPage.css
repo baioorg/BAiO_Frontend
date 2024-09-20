@@ -1,0 +1,56 @@
+.bracket {
+    padding: 25px;   
+    margin: auto;
+    max-width: 600px;
+}
+
+.reg-page {
+    background-color: #fff;
+    max-width:500em;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reg-content {
+    margin: 0 auto;
+    background-color: #fff;
+    color: black;
+    padding: 1.5em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(0, 0, 0);
+    width: 350px; /*change width of sign in panel*/
+}
+
+.reg-content h1 {
+    font-size: 15px;
+    font-weight: 100;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+}
+
+.line {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.btn {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    padding: 0.25em 0.5em;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: hsla(352, 64%, 35%, 0.2);
+  }
