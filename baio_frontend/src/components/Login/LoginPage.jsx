@@ -27,7 +27,6 @@ export default function loginPage() {
             <button className="btn">
               <Link href="/pages/Registration">Create new user account</Link>
             </button>
-            
         </div>
       </div>
     </div>
