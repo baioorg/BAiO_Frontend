@@ -10,6 +10,8 @@ import countryList from "react-select-country-list";
 export default function RegistrationForm() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [password, setPassword] = useState("");
+  const [checkPassword, setCheckPassword] = useState("");
   const [email, setEmail] = useState("");
   const [country, setCountry] = useState("");
   const [affiliation, setAffiliation] = useState("");
@@ -27,7 +29,7 @@ export default function RegistrationForm() {
   };
 
   //send user to email validation page
-  async function handleSubmit(event) {
+  async function handleSubmit() {
     try {
       router.push("/pages/EmailValidation");
     } catch (error) {
@@ -35,8 +37,16 @@ export default function RegistrationForm() {
     }
   }
 
-  function validateEmail(email) {
+  function validateEmail() {
     if (email.includes("@") && email.includes(".")) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function validatePassword() {
+    if (password === checkPassword) {
       return true;
     } else {
       return false;
@@ -47,6 +57,8 @@ export default function RegistrationForm() {
     if (
       firstName.length > 1 &&
       lastName.length > 1 &&
+      password.length> 1 &&
+      checkPassword.length>1&&
       email.length > 1 &&
       country !== "" &&
       affiliation.length > 1 &&
@@ -60,7 +72,7 @@ export default function RegistrationForm() {
   }
 
   
-  function allFieldsFilled(event) {
+  function allFieldsFilled() {
     //dont refresh
     event.preventDefault(); 
 
@@ -71,10 +83,15 @@ export default function RegistrationForm() {
     }
 
     //the email looks like an email
-    if (!validateEmail(email)) {
+    if (!validateEmail()) {
       alert(
         "Please enter a valid email address in the format of email@domain.com."
       );
+      return false;
+    }
+
+    if (!validatePassword()) {
+      alert("Passwords are not matching. Please try again.");
       return false;
     }
 
@@ -101,6 +118,24 @@ export default function RegistrationForm() {
             onChange={(lastName) => setLastName(lastName.target.value)}
             type="text"
             id="lastName"
+          />
+        </div>
+        <div className="reg-form-row">
+          <label htmlFor="password">Password</label>
+          <input
+            value={password}
+            onChange={(password) => setPassword(password.target.value)}
+            type="text"
+            id="password"
+          />
+        </div>
+        <div className="reg-form-row">
+          <label htmlFor="checkPassword">Enter password again</label>
+          <input
+            value={checkPassword}
+            onChange={(checkPassword) => setCheckPassword(checkPassword.target.value)}
+            type="text"
+            id="checkPassword"
           />
         </div>
         <div className="reg-form-row">
