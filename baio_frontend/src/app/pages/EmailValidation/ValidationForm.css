@@ -1,0 +1,56 @@
+.val-Container {
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+   
+}
+
+.val-new-user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.val-form-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 14px;
+    min-width: 300px;
+    margin-top:10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.val-form-row input {
+    border: 1px solid;
+    border-radius: 0.3em;
+    border-color: rgb(211, 209, 206);
+    height: 35px;
+    padding: 10px;
+}
+
+.val-dropdown {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top:10px;
+}
+
+.val-btn {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    padding: 0.25em 0.5em;
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.val-btn:hover,
+.val-btn:focus-visible {
+    background: rgb(121, 121, 121);
+  }
