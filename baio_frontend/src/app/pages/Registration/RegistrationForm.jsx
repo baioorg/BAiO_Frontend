@@ -100,8 +100,7 @@ export default function RegistrationForm() {
   }
 
   return (
-    <div className="regContainer">
-      <form onSubmit={allFieldsFilled} classname="new-user-form">
+      <form onSubmit={allFieldsFilled} classname="reg-new-user-form">
         <div className="reg-form-row">
           <label htmlFor="firstName">First Name</label>
           <input
@@ -188,6 +187,5 @@ export default function RegistrationForm() {
           Create new BAiO user account
         </button>
       </form>
-    </div>
   );
 }

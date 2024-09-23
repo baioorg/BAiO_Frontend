@@ -30,14 +30,9 @@
     font-weight: 100;
     font-weight: bold;
     text-align: center;
-    margin: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.line {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-}
 
 .btn {
     color: rgb(255, 255, 255);
@@ -45,7 +40,7 @@
     padding: 0.25em 0.5em;
     border: 1px solid black;
     margin-top: 10px;
-    margin-bottom: 10px;
+   
     border-radius: 5px;
 
 }

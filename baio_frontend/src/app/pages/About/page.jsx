@@ -7,7 +7,7 @@ export default function About() {
   return (
   <div className="about-page body">
     <Header/>
-    <div className="content">
+    <div className="about-content">
       <h2>About BAiO</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
