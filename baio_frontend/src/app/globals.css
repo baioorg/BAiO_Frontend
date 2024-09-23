@@ -12,11 +12,18 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  margin: 10em 0;
+  margin-top: 9em;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+.link:hover {
+   text-decoration: underline;
 }
+
+}
+
+
