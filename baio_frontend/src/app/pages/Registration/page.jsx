@@ -8,7 +8,7 @@ export default function Registration() {
     return(
         <div>
             <Header/>
-            <div className = "bracket"> 
+            <div className = "reg-bracket"> 
                 <div className = "reg-page">                   
                     <div className="reg-content">
                         <h1> Create new BAiO user account </h1>

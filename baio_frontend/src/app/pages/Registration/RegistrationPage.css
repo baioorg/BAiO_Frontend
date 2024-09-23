@@ -1,6 +1,7 @@
-.bracket {  
-    margin: auto;
+.reg-bracket {  
+    margin: 9em auto;
     max-width: 600px;
+    max-height: 500px;
 }
 
 .reg-page {
@@ -31,12 +32,6 @@
     font-weight: bold;
     text-align: center;
     margin: 5px;
-    margin-bottom: 10px;
-}
-
-.line {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
 }
 
 .btn {
@@ -45,7 +40,6 @@
     padding: 0.25em 0.5em;
     border: 1px solid black;
     margin-top: 10px;
-    margin-bottom: 10px;
     border-radius: 5px;
 
 }
