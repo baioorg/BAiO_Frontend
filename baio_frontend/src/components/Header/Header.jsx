@@ -3,18 +3,45 @@
 import React, {useState, useRef} from "react";
 import './Header.css'; 
 import Link from "next/link";
-import Button from '../Button/Button'
-import Image from "next/image";
 import ProfileDropdown from "../ProfileDropdown/ProfileDropdown";
 import {FaGithub, FaUserCircle} from 'react-icons/fa';
+import SettingsMenu from "../SettingsMenu/SettingsMenu";
+import ProfileSettingsMenu from "../ProfileSettingsMenu/ProfileSettingsMenu";
 
 
 export default function Header({type = 'header'}) {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const dropdownRef = useRef(null);
+    const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+    const [isProfileSettingsOpen, setIsProfileSettingsOpen] = useState(false);
     
     function toggleDropdown(){
         setIsDropdownOpen(prevstate => !prevstate);
+        setIsSettingsOpen(false);
+        setIsProfileSettingsOpen(false);
+    }
+
+    function openSettings(){
+        setIsSettingsOpen(true);
+        setIsDropdownOpen(false);
+        setIsProfileSettingsOpen(false);
+    }
+
+    function closeSettings(){
+        setIsSettingsOpen(false);
+        setIsDropdownOpen(false);
+        setIsProfileSettingsOpen(false);
+    }
+
+    function openProfileSettings(){
+        setIsProfileSettingsOpen(true);
+        setIsSettingsOpen(false);
+        setIsDropdownOpen(false);
+    }
+
+    function closeProfileSettings(){
+        setIsProfileSettingsOpen(false);
+        setIsSettingsOpen(false);
+        setIsDropdownOpen(false);
     }
     
     return (
@@ -29,13 +56,15 @@ export default function Header({type = 'header'}) {
                     <Link href="https://github.com/baioorg/" target="_blank" className="navbarLink"><FaGithub color="#ffffff" size="1.5em"/>Github</Link>
                     <Link href="/pages/About" className="navbarLink">About</Link>
                     <Link href="/pages/Team" className="navbarLink">Contact</Link>      
-                    <Button onClick={toggleDropdown} classname="profileButton" aria-label="Profile Menu">
+                    <button onClick={toggleDropdown} className="profileButton" aria-label="Profile Menu">
                         <FaUserCircle color="#ffffff" size="3em"/>
-                    </Button>
+                    </button>
                 </div>
 
             </header>
-            {isDropdownOpen && <div ref={dropdownRef}><ProfileDropdown /></div>}
+            {isDropdownOpen && <ProfileDropdown openSettings={openSettings} openProfileSettings={openProfileSettings}/>}
+            {isSettingsOpen && <SettingsMenu closeSettings={closeSettings}/>}
+            {isProfileSettingsOpen && <ProfileSettingsMenu closeProfileSettings={closeProfileSettings}/>}
         </div>
 
     )
