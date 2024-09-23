@@ -50,7 +50,7 @@ export default function Team() {
     <div className="team-page body">
       <Header />
 
-      <div className="content">
+      <div className="team-content">
         {/* If a profile is selected, show the profile details */}
         {selectedProfile ? (
           <ProfileScreen profile={selectedProfile} onClose={() => setSelectedProfile(null)} />
