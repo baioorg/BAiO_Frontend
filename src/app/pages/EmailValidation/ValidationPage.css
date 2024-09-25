@@ -14,7 +14,7 @@
 }
 
 .val-content {
-    margin: auto;
+    margin: 9em auto;
     background-color: #fff;
     color: black;
     padding: 1.5em;
@@ -38,11 +38,6 @@
     font-weight: 100;
     text-align: center;
     margin: 10px;
-}
-
-.line {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
 }
 
 .val-btn {
