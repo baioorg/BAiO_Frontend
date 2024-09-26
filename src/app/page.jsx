@@ -1,6 +1,5 @@
-import Header from "@/components/Header/Header";
-import Login from "@/components/Login/LoginPage"
-
+import Header from "../components/Header/Header";
+import Login from "../components/Login/LoginPage";
 
 export default function App() {
   return (
