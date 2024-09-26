@@ -49,13 +49,13 @@ export default function Header({type = 'header'}) {
             <header className = "navbar">
                 <div className = "navbarLeft">
                     <Link href="/" className="navbarLink"><h1>BAiO</h1></Link>
-                    <Link href="/pages/Main" className="navbarLink">New Chat</Link>
+                    <Link href="/Main" className="navbarLink">New Chat</Link>
                 </div>
 
                 <div className = "navbarRight">
                     <Link href="https://github.com/baioorg/" target="_blank" className="navbarLink"><FaGithub color="#ffffff" size="1.5em"/>Github</Link>
-                    <Link href="/pages/About" className="navbarLink">About</Link>
-                    <Link href="/pages/Team" className="navbarLink">Contact</Link>      
+                    <Link href="/About" className="navbarLink">About</Link>
+                    <Link href="/Team" className="navbarLink">Contact</Link>      
                     <button onClick={toggleDropdown} className="profileButton" aria-label="Profile Menu">
                         <FaUserCircle color="#ffffff" size="3em"/>
                     </button>

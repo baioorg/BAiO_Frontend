@@ -31,7 +31,7 @@ export default function RegistrationForm() {
   //send user to email validation page
   async function handleSubmit() {
     try {
-      router.push("/pages/EmailValidation");
+      router.push("/EmailValidation");
     } catch (error) {
       alert("Error during registration");
     }
