@@ -49,7 +49,7 @@ export default function Header({type = 'header'}) {
             <header className = "navbar">
                 <div className = "navbarLeft">
                     <Link href="/" className="navbarLink"><h1>BAiO</h1></Link>
-                    <Link href="/" className="navbarLink">New Chat</Link>
+                    <Link href="/pages/Main" className="navbarLink">New Chat</Link>
                 </div>
 
                 <div className = "navbarRight">

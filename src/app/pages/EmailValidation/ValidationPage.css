@@ -1,11 +1,11 @@
-.bracket {  
+.bracket {
     margin: auto;
-    max-width: 600px;
+    max-width: 800px;
 }
 
-.reg-page {
+.val-page {
     background-color: #fff;
-    max-width:500em;
+    max-width: 800px;
     text-align: start;
     display: flex;
     justify-content: center;
@@ -13,8 +13,8 @@
     flex-direction: column;
 }
 
-.reg-content {
-    margin: 0 auto;
+.val-content {
+    margin: 9em auto;
     background-color: #fff;
     color: black;
     padding: 1.5em;
@@ -22,24 +22,25 @@
     display: flex;
     flex-direction: column;
     border: 1px solid rgb(0, 0, 0);
-    width: 350px; /*change width of sign in panel*/
+    width: 700px; /*change width of sign in panel*/
 }
 
-.reg-content h1 {
-    font-size: 15px;
+.val-content h1 {
+    font-size: 16px;
     font-weight: 100;
     font-weight: bold;
     text-align: center;
     margin: 5px;
-    margin-bottom: 10px;
 }
 
-.line {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+.val-content h2 {
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+    margin: 10px;
 }
 
-.btn {
+.val-btn {
     color: rgb(255, 255, 255);
     background-color: black;
     padding: 0.25em 0.5em;
@@ -47,10 +48,23 @@
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    width: 250px;
 
 }
 
-.btn:hover,
-.btn:focus-visible {
+.val-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.val-btn:hover,
+.val-btn:focus-visible {
     background: rgb(121, 121, 121);
   }
+
+.letterImg {
+    margin: auto;
+    padding: 15px;
+}

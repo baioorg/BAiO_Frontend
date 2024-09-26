@@ -1,11 +1,11 @@
 .bracket {
     margin: auto;
-    max-width: 600px;
+    max-width: 600px; 
 }
 
 .login-page {
     background-color: #fff;
-    max-width:500em;
+    max-width: 500em;
     text-align: start;
     display: flex;
     justify-content: center;
@@ -14,7 +14,7 @@
 }
 
 .logincontent {
-    margin: 0 auto;
+    margin: 9em auto;
     background-color: #fff;
     color: black;
     padding: 1.5em;
