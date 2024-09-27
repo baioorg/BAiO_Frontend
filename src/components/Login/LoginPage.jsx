@@ -17,7 +17,7 @@ export default function loginPage() {
             <hr className = "line"/>
             <h1> Register as a new BAiO user</h1>
             
-              <Link className ="btn" href="/pages/Registration">
+              <Link className ="btn" href="/Registration">
                 <button>Create new user account</button>
               </Link>
             

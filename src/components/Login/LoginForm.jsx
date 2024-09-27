@@ -26,7 +26,7 @@ export default function LogInForm() {
                 });
 
               
-                router.push("/pages/Main");
+                router.push("/Main");
         }
     
 
